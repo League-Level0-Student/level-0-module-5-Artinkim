@@ -21,12 +21,18 @@ String pi = "3.14159265";
 		// 9. If you want to give the user more than one chance to guess,
 		//    put a for loop around steps 4-8.
 
-			for(int i = 0;i< pi.length();i++)
+			for(int i = 2;i< pi.length();i++)
 			{
 			String g = JOptionPane.showInputDialog("What is the next digit of pi");
-			if(pi.charAt(i).equals(g))
+			
+			if(pi.charAt(i)==(g.charAt(0)))
 			{
-			correct	
+			JOptionPane.showMessageDialog(null, "Correct");
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "Incorrect start over");
+				break;
 			}
 			}
 
